@@ -96,7 +96,7 @@ void find_images(GumboNode * node, std::vector<std::string> &image_sources) {
 
 void download_images(std::vector<std::string> img_sources) {
     for (int i = 0; i < img_sources.size() ; i++) {
-        std::string file_name = "C:\\Users\\£ukasz\\Desktop\\imgs\\img"+std::to_string(i)+".png";
+        std::string file_name = "C:\\Users\\£ukasz\\Desktop\\imgs\\img"+std::to_string(i)+".png"; // example folder
         char* url = to_char_arr(img_sources[i]);
 
         if (!download_image(&url[0],file_name)) {
@@ -112,7 +112,7 @@ void download_images(std::vector<std::string> img_sources) {
 int main(){
 
 
-    std::string content = extract_html("https://boards.4channel.org/a/thread/249823792");
+    std::string content = extract_html(""); // site url goes here
 
     GumboOutput* content_gumbo = gumbo_parse(content.c_str());
 
